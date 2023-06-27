@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% block title%} Index-title {% endblock %}
+
+{% block content%}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <p>Lorem ipsum dolor s Lorem ipsum dolor s Lorem ipsum dolor sLorem ipsum dolor </p>
+        <button class="btn btn-warning">На страницу про нас</button>
+
+        {% for el in values %}
+            {% if el == 'Hello' %}
+                {% filter upper %}
+                    <p>{{ el }}</p>
+                {% endfilter %}
+            {% endif %}
+        {% endfor%}
+
+        {% for el in obj %}
+            <p>{{ el }}</p>
+        {% endfor%}
+
+
+    </div>
+{% endblock %}
